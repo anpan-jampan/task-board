@@ -19,4 +19,29 @@ git push
 
 ## Project
 
-This is **samurai task-board** — a task management board application. Architecture and commands will be documented here as the project is built out.
+**samurai task-board** — タスク管理ボードアプリケーション。
+
+- **リポジトリ:** https://github.com/anpan-jampan/task-board
+- **公開URL:** https://anpan-jampan.github.io/task-board/
+
+## 技術スタック
+
+- **React 18** — UIフレームワーク（関数コンポーネント + Hooks）
+- **Vite 6** — ビルドツール・開発サーバー
+- **localStorage** — タスクの永続化（キー: `task-board-tasks`）
+- **GitHub Actions** — `master` へのプッシュ時に自動ビルド＆GitHub Pagesへデプロイ
+
+### 主要コマンド
+
+```bash
+npm run dev      # 開発サーバー起動 (http://localhost:5173)
+npm run build    # プロダクションビルド → dist/
+```
+
+## 命名規約
+
+- **コンポーネントファイル:** PascalCase（例: `TaskList.jsx`、`AddTaskForm.jsx`）
+- **コンポーネント関数:** PascalCase（例: `export default function TaskList()`）
+- **CSSクラス名:** kebab-case（例: `.task-list`、`.delete-btn`）
+- **状態・変数:** camelCase（例: `tasks`、`inputValue`）
+- **定数:** UPPER_SNAKE_CASE（例: `STORAGE_KEY`）
